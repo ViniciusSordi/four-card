@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --cred: hsl(0, 78%, 62%);
+    --ccyan: hsl(180, 62%, 55%);
+    --corange: hsl(34, 97%, 64%);
+    --cblue: hsl(212, 86%, 64%);
+    --cdarkblue: hsl(234, 12%, 34%);
+    --cgrayblue: hsl(229, 6%, 66%);
+    --clighgray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--clighgray);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.txt {
+    max-width: 530px;
+    padding-top: 60px;
+}
+
+.txt h1 {
+    font-weight: 200;
+    text-align: center;
+    color: var(--cdarkblue);
+    padding-bottom: 20px;
+}
+
+.subtitle {
+    font-weight: 600;
+}
+
+.txt p {
+    text-align: center;
+    color: var(--cgrayblue);
+    margin-bottom: 60px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.fourcards {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 20px; 
+    background-color: white;
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.096);
+}
+
+.txtcards {
+    padding: 20px;
+}
+
+.txtcards h2 {
+    padding-bottom: 12px;
+    font-weight: 600;
+    color: var(--cdarkblue);
+}
+
+.txtcards p {
+    color: var(--cgrayblue);
+}
+
+.imgcards {
+    padding-top: 30px;
+    padding-right: 20px;
+    justify-self: end;
+}
+
+.side1 {
+    border-top: 4px solid var(--ccyan);
+    grid-row: span 2;
+    margin-left: 20px;
+}
+
+.side2 {
+    border-top: 4px solid var(--cblue);
+    grid-row: span 2;
+    margin-right: 20px;
+}
+
+.mid1  {
+    border-top: 4px solid var(--cred);
+}
+
+.mid2 {
+    border-top: 4px solid var(--corange);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 770px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .side2 {
+        order: 4;
+        margin-bottom: 30px;
+        margin-right: 0px;
+    }
+    .side1 {
+        margin-left: 0px;
+    }
+    .fourcards {
+        max-width: 350px;
+    }
+    .txt p {
+        max-width: 350px;
+        text-align: left;
+    }
+    .mid2 {
+        margin-bottom: 0px;
+    }
+}
